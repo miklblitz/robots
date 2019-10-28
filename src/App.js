@@ -1,12 +1,15 @@
 import React, {Component} from 'react';
-import logo from './logo.svg';
+
+import {CardList} from './components/card-list/card-list.component';
+
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      robots: []
+      robots: [],
+      search: ''
     };
   }
 
@@ -22,9 +25,10 @@ class App extends Component {
   render(){
     return (
       <div className="App" >
-       {
-         this.state.robots.map(robot => <h2 key={robot.id}>{robot.name}</h2>)
-       }
+        <input type='text' placeholder='serach robots' onChange={
+          e => this.setState({ search: e.target.value })
+        } />
+        <CardList robots={this.state.robots} />
       </div>
     )
   }
