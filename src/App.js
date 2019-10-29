@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 
 import {CardList} from './components/card-list/card-list.component';
-
+import {SearchBox} from './components/search-box/search-box.component';
 import './App.css';
 
 class App extends Component {
@@ -11,6 +11,8 @@ class App extends Component {
       robots: [],
       search: ''
     };
+
+    this.handleChange = this.handleChange.bind(this);
   }
 
   componentDidMount() {
@@ -22,13 +24,23 @@ class App extends Component {
       });
   }
 
+  handleChange = e => {
+    this.setState({ search: e.target.value })
+  }
+
   render(){
+    const { robots, search} = this.state;
+    const filterRobots = robots.filter(robot =>
+      robot.name.toLowerCase().includes(search.toLowerCase())
+    )
     return (
       <div className="App" >
-        <input type='text' placeholder='serach robots' onChange={
-          e => this.setState({ search: e.target.value })
-        } />
-        <CardList robots={this.state.robots} />
+        <h1>Robotics managment</h1>
+        <SearchBox 
+          placeholder='search robots'
+          handleChange={this.handleChange}
+        />
+        <CardList robots={filterRobots} />
       </div>
     )
   }
