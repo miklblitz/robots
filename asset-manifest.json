@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/robots/static/css/main.4bc1fb5c.chunk.css",
+    "main.js": "/robots/static/js/main.935dc178.chunk.js",
+    "main.js.map": "/robots/static/js/main.935dc178.chunk.js.map",
+    "runtime-main.js": "/robots/static/js/runtime-main.d11597f1.js",
+    "runtime-main.js.map": "/robots/static/js/runtime-main.d11597f1.js.map",
+    "static/js/2.61f73c30.chunk.js": "/robots/static/js/2.61f73c30.chunk.js",
+    "static/js/2.61f73c30.chunk.js.map": "/robots/static/js/2.61f73c30.chunk.js.map",
+    "index.html": "/robots/index.html",
+    "precache-manifest.76ff264e683fbc543c55c7f605acc279.js": "/robots/precache-manifest.76ff264e683fbc543c55c7f605acc279.js",
+    "service-worker.js": "/robots/service-worker.js",
+    "static/css/main.4bc1fb5c.chunk.css.map": "/robots/static/css/main.4bc1fb5c.chunk.css.map"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d11597f1.js",
+    "static/js/2.61f73c30.chunk.js",
+    "static/css/main.4bc1fb5c.chunk.css",
+    "static/js/main.935dc178.chunk.js"
+  ]
+}
